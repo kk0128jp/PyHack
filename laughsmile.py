@@ -1,6 +1,9 @@
 from scapy.all import IP, TCP, send
 from faker import Faker
 
+class Main():
+    pass
+
 # 引数から宛先IPの受け取り
 get_dst_ip = ''
 
