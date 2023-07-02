@@ -2,6 +2,7 @@ from scapy.all import IP, TCP, send
 from faker import Faker
 
 class Main():
+    # Dos攻撃クラス
     pass
 
 # 引数から宛先IPの受け取り
