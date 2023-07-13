@@ -2,7 +2,7 @@ import socket
 
 def attacker(listen_ip, listen_port):
     ATTACKER_HOST = listen_ip
-    ATTACKER_PORT = listen_port
+    ATTACKER_PORT = int(listen_port)
     BUFFER_SIZE = 1024 * 128
     SEPARATOR = "<sep>"
 
