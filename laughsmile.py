@@ -4,6 +4,7 @@ import sys
 from dos import syn_flood
 from keylogger import keylogger
 from bindshell import attacker
+from reverseshell import attacker
 import argparse
    
 def main():
@@ -16,8 +17,11 @@ def main():
     parser_synflood.add_argument('-p', '--port', help='target port')
     
     # bindshell コマンドの parser を作成
-    parser_bindshell_client = sub_psr.add_parser('bs-client', help='see `bs-client -h`')
+    parser_bindshell_client = sub_psr.add_parser('bs-connect', help='see `bs-connect -h`')
     parser_bindshell_client.add_argument('target', help='target ip address')
+    
+    # reverseshell コマンドの parser を作成
+    
     
     args = psr.parse_args()
     
@@ -29,9 +33,11 @@ def main():
         # SYN Flood攻撃
         syn_flood.syn_flood_attack(args.target, args.port)
     # サブコマンドが rs-client の場合(reverceshell)
-    elif args.subcommand == 'bs-client':
+    elif args.subcommand == 'bs-connect':
         # client 要求
         attacker.attacker(args.target)
+    elif args.subcommand == 'rs-connect':
+        attacker.attacker()
             
     # キーロガー
     #keylogger.keylogger()
