@@ -1,5 +1,4 @@
 from scapy.all import IP, TCP, send, RandShort, Raw
-#from faker import Faker
 
 def syn_flood_attack(target_ip, target_port):
     ip = IP(dst=target_ip)
