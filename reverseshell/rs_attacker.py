@@ -1,6 +1,7 @@
 import socket
 
 def attacker(listen_ip, listen_port):
+    # listen my ip and port
     ATTACKER_HOST = listen_ip
     ATTACKER_PORT = int(listen_port)
     BUFFER_SIZE = 1024 * 128

