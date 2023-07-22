@@ -9,7 +9,7 @@ from reverseshell import rs_attacker
 from spoofing import spoof_mail
 
 def main():
-    psr = argparse.ArgumentParser(prog="プログラムの名前", usage="使い方", description="説明", add_help=True)
+    psr = argparse.ArgumentParser(prog="プログラムの名前", usage="使い方", description="Description: ", add_help=True)
     sub_psr = psr.add_subparsers(dest='subcommand')
     
     # synflood コマンドの parser を作成

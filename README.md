@@ -20,17 +20,10 @@ Tool List
 ## Install
 
 ``` bash
-pip install scapy pyyaml keyboard
+pip install scapy pyyaml keyboard pyinstaller
 ```
 
 ## Usage
-
-``` bash
-git clone https://github.com/kk0128jp/PyHack.git
-cd ./PyHack
-cp example_setting.yaml setting.yaml
-vi setting.yaml
-```
 
 ``` bash
 usage: 使い方
@@ -47,6 +40,33 @@ positional arguments:
 options:
   -h, --help            show this help message and exit
 ```
+
+### setting
+
+``` bash
+git clone https://github.com/kk0128jp/PyHack.git
+cd ./PyHack
+cp example_setting.yaml setting.yaml
+vi setting.yaml
+```
+
+### Dos
+
+### BindShell
+
+### ReverseShell
+
+1.Edit rs_raget.py SERVER_HOST and SERVER_PORT
+2.Convert python file to exe file
+
+``` bash
+vi rs_target.py
+pyinstaller "python file" --onefile --noconsole
+```
+
+### KeyRogger
+
+### Spoofing
 
 ## Note
 
