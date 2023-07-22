@@ -52,12 +52,16 @@ vi setting.yaml
 
 ### Dos
 
+waiting update
+
 ### BindShell
+
+waiting update
 
 ### ReverseShell
 
-1.Edit rs_raget.py SERVER_HOST and SERVER_PORT
-2.Convert python file to exe file
+1. Edit rs_raget.py SERVER_HOST and SERVER_PORT
+2. Convert python file to exe file
 
 ``` bash
 vi rs_target.py
@@ -66,7 +70,11 @@ pyinstaller "python file" --onefile --noconsole
 
 ### KeyRogger
 
+waiting update
+
 ### Spoofing
+
+waiting update
 
 ## Note
 
