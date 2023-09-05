@@ -60,7 +60,7 @@ waiting update
 
 ### ReverseShell
 
-1. Edit rs_raget.py SERVER_HOST and SERVER_PORT
+1. Edit rs_target.py SERVER_HOST and SERVER_PORT
 2. Convert python file to exe file
 
 ``` bash
