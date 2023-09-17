@@ -7,6 +7,7 @@ from keylogger import keylogger
 from bindshell import bs_attacker
 from reverseshell import rs_attacker
 from spoofing import spoof_mail
+from filetransfer import ft_server
 
 def main():
     psr = argparse.ArgumentParser(prog="プログラムの名前", usage="使い方", description="Description: ", add_help=True)
@@ -30,6 +31,11 @@ def main():
     parser_spoofmail = sub_psr.add_parser('spoof-mail', help='see `spoof-mail -h`')
     parser_spoofmail.add_argument('target', help='target mail address')
     
+    # filetransfer コマンド parser を作成
+    parser_filetransfer = sub_psr.add_parser('ft-server', help="see `ft-server -h`")
+    parser_filetransfer.add_argument('listenIp', help="listen my ip address")
+    parser_filetransfer.add_argument('listenPort', help="listen my port number")
+    
     args = psr.parse_args()
     
     # サブコマンドが synflood の場合
@@ -49,6 +55,8 @@ def main():
     # spoof-mail (send spoof mail)
     elif args.subcommand == 'spoof-mail':
         spoof_mail.sendMail(args.target)
+    elif args.subcommand == 'ft-server':
+        ft_server.ft_server(args.listenIp, args.listenPort)
         
     # キーロガー
     #keylogger.keylogger()

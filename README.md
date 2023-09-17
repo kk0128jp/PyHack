@@ -65,7 +65,7 @@ waiting update
 
 ``` bash
 vi rs_target.py
-pyinstaller "python file" --onefile --noconsole
+pyinstaller pythonfile --onefile --noconsole
 ```
 
 ### KeyRogger
